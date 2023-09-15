@@ -1,0 +1,7 @@
+/* Chapter 6-7 exercise 6
+Ingrid Salvador
+12-1-2022 */
+
+var ex6Array = ["a", "b", "c", "d", "e", "f", "g", "h"];
+ex6Array.splice(5,1);
+ex6Array;

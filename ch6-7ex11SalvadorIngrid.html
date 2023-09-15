@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<! Title of the program:    
+Ingrid Salvador 
+24-1-2022 >
+<html>  
+<head> 
+    <h1>My program </h1> 
+</head> 
+
+<body> 
+    <script>
+     var countries = [ 
+       "Russia",
+       "Canada",
+       "Spain",
+       "France",
+       "Italy",
+       "Sweden"
+       ]; 
+     var capitals = [ 
+       "Moscow",
+       "Ottawa",
+       "Madrid",
+       "Paris",
+       "Rome",
+       "Stockholm"      
+       ];
+       
+     alert(
+        "Capitals game!" + 
+        "\n" + 
+        "\n" +
+        "Answer three consecutive correct answers as fast as you can!" 
+      );
+     
+     var points = 0;
+     var startTime = performance.now();
+     
+     while(points < 3){
+        var randomInteger1 = Math.floor(Math.random()*countries.length);
+        var answer1 = prompt("What is the capital of " + countries[randomInteger1] + " ?");
+         if (capitals[randomInteger1].toUpperCase() === answer1.toUpperCase())
+           {
+            points+=1
+            alert("Correct!");
+            countries.splice(randomInteger1,1);
+            capitals.splice(randomInteger1,1);
+            
+           }
+         else{
+            points = 0
+            alert("Wrong!" + " The capital of " + countries[randomInteger1] + " is " + capitals[randomInteger1]); 
+            var countries = [ 
+                   "Russia",
+                   "Canada",
+                   "Spain",
+                   "France",
+                   "Italy",
+                   "Sweden"
+                   ]; 
+            var capitals = [ 
+               "Moscow",
+               "Ottawa",
+               "Madrid",
+               "Paris",
+               "Rome",
+               "Stockholm"      
+               ];
+           }
+     }
+     var endTime = performance.now();
+     alert("Congratulations! You have given three correct answers in " + (endTime - startTime)/1000 + " seconds.");    
+     
+     </script>
+</body> 
+
+<title> My program </title>
+</html> 

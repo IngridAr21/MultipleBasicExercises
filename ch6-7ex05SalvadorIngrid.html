@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<! Title of the program:    
+Ingrid Salvador 
+22-11-2021 >
+<html>  
+<head> 
+    <h1>My program </h1> 
+</head> 
+
+<body> 
+    <script>
+       var questions = [ 
+       "What is the capital of Russia?",
+       "What is the capital of Canada?",
+       "What is the capital of Spain?",
+       "What is the capital of France?",
+       "What is the capital of Italy?",
+       "What is the capital of Sweden?"
+       ]; 
+       var answers = [ 
+       "Moscow",
+       "Ottawa",
+       "Madrid",
+       "Paris",
+       "Rome",
+       "Stockholm"      
+       ];
+       
+       alert(
+         "Capitals game!" + 
+         "\n" + 
+         "\n" +
+         "correct answer -> +2 points" + 
+         "\n" + 
+         "\n" +
+         "wrong answer -> -1 point"
+       );
+       
+       var points = 0;
+       
+       var randomInteger1 = Math.floor(Math.random()*questions.length);
+       var answer1 = prompt(questions[randomInteger1]);
+       if (answers[randomInteger1].toUpperCase() === answer1.toUpperCase())
+       {
+        points+=2 }
+       else{
+        points -=1}
+        
+       var randomInteger2 = Math.floor(Math.random()*questions.length);
+       var answer2 = prompt(questions[randomInteger2]);
+       if (answers[randomInteger2].toUpperCase() === answer2.toUpperCase())
+       {
+        points+=2}
+       else{
+        points -=1}
+        
+       var randomInteger3 = Math.floor(Math.random()*questions.length);
+       var answer3 = prompt(questions[randomInteger3]);
+       if (answers[randomInteger3].toUpperCase() === answer3.toUpperCase())
+       {
+        points+=2}
+       else{
+        points -=1}
+        
+       if (points <= 0){
+        alert("You don't know much! Your score is " + points)
+       } 
+       else if (points >= 6){
+        alert("Very good! Your score is " + points)
+       } 
+       else {
+        alert("Not bad. Your score is " + points)
+       }
+    </script>
+</body> 
+
+<title> My program </title>
+</html> 
